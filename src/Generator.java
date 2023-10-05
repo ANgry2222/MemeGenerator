@@ -3,6 +3,7 @@ import java.awt.*;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
+import java.io.InputStream;
 
 public class Generator {
     private static final short shadowOffset = 3;
@@ -17,8 +18,9 @@ public class Generator {
         }
 
         Graphics g = img.getGraphics();
-        try {
-            g.setFont(Font.createFont(Font.PLAIN, new File("Fonts/Impact_Regular.ttf")).deriveFont(Font.PLAIN, gs.getFontSize()));
+
+        try{
+            g.setFont(Font.createFont(Font.PLAIN, Thread.currentThread().getContextClassLoader().getResourceAsStream("Impact_Regular.ttf")).deriveFont(Font.PLAIN, gs.getFontSize()));
         } catch (FontFormatException | IOException e) {
             throw new RuntimeException(e);
         }

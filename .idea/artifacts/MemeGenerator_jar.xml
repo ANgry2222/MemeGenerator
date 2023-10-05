@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" build-on-make="true" name="MemeGenerator:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/MemeGenerator_jar</output-path>
+    <root id="archive" name="MemeGenerator.jar">
+      <element id="module-output" name="MemeGenerator" />
+    </root>
+  </artifact>
+</component>
